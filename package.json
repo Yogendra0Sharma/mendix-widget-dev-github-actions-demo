@@ -18,7 +18,7 @@
     "build": "pluggable-widgets-tools build:web",
     "lint": "pluggable-widgets-tools lint",
     "lint:fix": "pluggable-widgets-tools lint:fix",
-    "test": "pluggable-widgets-tools test:unit:web --no-cache --ci && npm run test:e2e",
+    "test": "pluggable-widgets-tools test:unit:web --no-cache --ci",
     "test:unit": "pluggable-widgets-tools test:unit:web --coverage",
     "test:e2e": "pluggable-widgets-tools test:e2e --url \"https://badge.mxapps.io\"",
     "test:e2e:dev": "pluggable-widgets-tools test:e2e --debug",
