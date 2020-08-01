@@ -24,13 +24,14 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-      env:
-        WIDGET_FOLDER: .
-        RELEASE_TITLE: TestWidget
     - run: npm ci
     - run: npm run build --if-present
     - run: npm test
 
     - name: Wendix Widget MPK Release Publisher
       uses: Yogendra0Sharma/mendix-widget-release-action@v1.0.1
+      env:
+       GITHUB_TOKEN: ${{ secrets.TOKEN }}
+       WIDGET_FOLDER: ./
+       RELEASE_TITLE: New Build
 
